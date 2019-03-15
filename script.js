@@ -5,7 +5,7 @@
 // randomNumber(5);
 
 if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('/serviceworkertest.js')
+  navigator.serviceWorker.register('./serviceworkertest.js')
   .then(function(registration){
     console.log('Service Worker Registered');
 
