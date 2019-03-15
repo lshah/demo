@@ -5,7 +5,7 @@
   "background_color": "#6a0893",
   "display": "standalone",
   "Scope": "/",
-  "start_url": "/",
+  "start_url": "https://lshah.github.io/demo",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
