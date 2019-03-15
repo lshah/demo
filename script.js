@@ -4,16 +4,16 @@
 // }
 // randomNumber(5);
 
-// if('serviceWorker' in navigator){
-//   navigator.serviceWorker.register('./serviceworkertest.js')
-//   .then(function(registration){
-//     console.log('Service Worker Registered');
-//
-//   }).catch(function(err){
-//     console.log('Service Worker Registration failed', err);
-//   })
-// }
-//
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('./serviceworkertest.js')
+  .then(function(registration){
+    console.log('Service Worker Registered');
+
+  }).catch(function(err){
+    console.log('Service Worker Registration failed', err);
+  })
+}
+
 // let imageRequest = new Request('https://lshah.github.io/images/abstract-art-2.jpg',{
 //   method: 'GET',
 //   mode: 'cors',
