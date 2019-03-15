@@ -49,7 +49,7 @@ self.addEventListener('fetch', event => {
 					console.log('[Service Worker] no response from fetch');
 					return response;
 				}
-					let responseClone = event.response.clone();
+					let responseClone = response.clone();
 					caches.open(cacheName).then(cache => {
 						cache.put(event.request, responseClone);
 						console.log('[ServiceWorker] New Data Cached', event.request.url);
