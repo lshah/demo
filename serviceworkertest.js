@@ -1,10 +1,10 @@
-var cacheName = 'v2';
+var cacheName = 'v1';
 let cacheFiles = [
 				'./',
-				'/index.html',
-				'/script.js',
-				'/styles.css',
-				'/img/',
+				'./index.html',
+				'./script.js',
+				'./styles.css',
+				'./img/',
 				'https://fonts.googleapis.com/css?family=Roboto'
 			]
 
