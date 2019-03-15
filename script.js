@@ -4,35 +4,35 @@
 // }
 // randomNumber(5);
 
-if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('./serviceworkertest.js')
-  .then(function(registration){
-    console.log('Service Worker Registered');
-
-  }).catch(function(err){
-    console.log('Service Worker Registration failed', err);
-  })
-}
-
-let imageRequest = new Request('https://lshah.github.io/images/abstract-art-2.jpg',{
-  method: 'GET',
-  mode: 'cors',
-  // headers: new Headers({
-  //   'Cache-Control': 'no-cache'
-  // })
-});
-
-let img = document.getElementById('image');
-
-fetch(imageRequest)
-.then(response => response.blob())
-.then(blob => {
-  let imgURL = URL.createObjectURL(blob);
-  console.log(imgURL)
-  img.src = imgURL;
-  img.alt = 'abstract-art';
-})
-.catch(error => console.error('Error', error))
+// if('serviceWorker' in navigator){
+//   navigator.serviceWorker.register('./serviceworkertest.js')
+//   .then(function(registration){
+//     console.log('Service Worker Registered');
+//
+//   }).catch(function(err){
+//     console.log('Service Worker Registration failed', err);
+//   })
+// }
+//
+// let imageRequest = new Request('https://lshah.github.io/images/abstract-art-2.jpg',{
+//   method: 'GET',
+//   mode: 'cors',
+//   // headers: new Headers({
+//   //   'Cache-Control': 'no-cache'
+//   // })
+// });
+//
+// let img = document.getElementById('image');
+//
+// fetch(imageRequest)
+// .then(response => response.blob())
+// .then(blob => {
+//   let imgURL = URL.createObjectURL(blob);
+//   console.log(imgURL)
+//   img.src = imgURL;
+//   img.alt = 'abstract-art';
+// })
+// .catch(error => console.error('Error', error))
 
 // function downloadImage() {
 //   fetch('https://lshah.github.io/images/art.jpg',
