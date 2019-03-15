@@ -14,7 +14,7 @@ if('serviceWorker' in navigator){
   })
 }
 
-let imageRequest = new Request('https://lshah.github.io/images/abstract-art-1.jpg',{
+let imageRequest = new Request('https://lshah.github.io/images/abstract-art-2.jpg',{
   method: 'GET',
   mode: 'cors',
   // headers: new Headers({

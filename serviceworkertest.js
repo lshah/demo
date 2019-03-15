@@ -4,7 +4,7 @@ let cacheFiles = [
 				'./index.html',
 				'./script.js',
 				'./styles.css',
-				'./img',
+				// './img',
 				'https://fonts.googleapis.com/css?family=Roboto'
 			]
 
