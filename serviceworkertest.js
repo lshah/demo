@@ -1,4 +1,4 @@
-var cacheName = 'v1';
+var cacheName = 'v2';
 let cacheFiles = [
 				'./',
 				'./index.html',
@@ -6,7 +6,9 @@ let cacheFiles = [
 				'./styles.css',
 				'./img/abstract-art-1.jpg',
 				'./img/abstract-art-2.jpg',
-				'https://fonts.googleapis.com/css?family=Roboto'
+				// 'https://fonts.googleapis.com/css?family=Roboto'
+				'./favicon-32x32.png',
+				'./favicon.ico'
 			]
 
 self.addEventListener('install', event => {
