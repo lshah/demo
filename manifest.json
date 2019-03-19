@@ -1,8 +1,8 @@
 {
   "name": "Demo App",
   "short_name": "Demo",
-  "theme_color": "#2196f3",
-  "background_color": "#6a0893",
+  "theme_color": "#4e116b",
+  "background_color": "#e20619",
   "display": "standalone",
   "Scope": "/",
   "start_url": "https://lshah.github.io/demo",
