@@ -1,4 +1,4 @@
-var cacheName = 'v1';
+let cacheName = 'v2';
 let cacheFiles = [
 				'./',
 				'./index.html',
@@ -12,7 +12,7 @@ let cacheFiles = [
 			]
 
 self.addEventListener('install', event => {
-	console.log('[Service Worker] installed')
+	console.log('SW installed')
 	event.waitUntil(
 		caches.open(cacheName).then(cache => {
 			console.log('[Service Worker] caching cacheFiles');
@@ -22,12 +22,12 @@ self.addEventListener('install', event => {
 })
 
 self.addEventListener('activate', event => {
-	console.log('[Service Worker] activated')
+	console.log('SW activated')
 	event.waitUntil(
 		caches.keys().then(cacheNames => {
 			return Promise.all(cacheNames.map(thisCacheName => {
 				if(thisCacheName !== cacheName){
-					console.log('[Service Worker] Removing cached files from: ' + thisCacheName);
+					console.log('SW Removing cached files from: ' + thisCacheName);
 					return caches.delete(thisCacheName);
 				}
 			}))
@@ -36,12 +36,12 @@ self.addEventListener('activate', event => {
 })
 
 self.addEventListener('fetch', event => {
-	console.log('[Service Worker] fetching', event.request.url)
+	console.log('SW fetching', event.request.url)
 	event.respondWith(
 		caches.match(event.request)
 		.then(response => {
 			if(response){
-				console.log('[Service Worker] found in cache', event.request.url, response);
+				console.log('SW found in cache', event.request.url, response);
 				return response;
 			}
 
@@ -49,19 +49,19 @@ self.addEventListener('fetch', event => {
 			return fetch(requestClone)
 			.then(response => {
 				if(!response){
-					console.log('[Service Worker] no response from fetch');
+					console.log('SW no response from fetch');
 					return response;
 				}
 					let responseClone = response.clone();
 					caches.open(cacheName).then(cache => {
 						cache.put(event.request, responseClone);
-						console.log('[ServiceWorker] New Data Cached', event.request.url);
+						console.log('SW New Data Cached', event.request.url);
 						return response;
 					});
 
 				})
 			.catch(error => {
-				console.log('[Service Worker] Error fetching and caching new data', error)
+				console.log('SW Error fetching and caching new data', error)
 			})
 		})
 	);

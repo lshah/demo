@@ -33,7 +33,7 @@ if('serviceWorker' in navigator){
 //   img.alt = 'abstract-art';
 // })
 // .catch(error => console.error('Error', error))
-
+//
 // function downloadImage() {
 //   fetch('https://lshah.github.io/images/art.jpg',
 //     {mode: 'cors'})
